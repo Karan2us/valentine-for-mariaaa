@@ -1,0 +1,115 @@
+/* Romantic pink/purple gradient background */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff9cd3, #d67fff);
+    font-family: 'Comic Sans MS', cursive;
+    overflow: hidden;
+}
+
+/* Floating hearts animation */
+.hearts::before {
+    content: "❤";
+    position: fixed;
+    color: #ff3b6e;
+    font-size: 24px;
+    animation: float 8s linear infinite;
+    opacity: 0;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+}
+
+/* Create multiple hearts */
+.hearts::before { left: 10%; animation-delay: 0s; }
+.hearts::after { left: 20%; animation-delay: 2s; }
+.hearts div:nth-child(1) { left: 30%; animation-delay: 4s; }
+/* Add more hearts as needed */
+
+/* Valentine card styling */
+.valentine-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide.active {
+    display: block;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+button {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#yes-btn {
+    background: #ff6b6b;
+    color: white;
+}
+
+#no-btn {
+    background: #ffd93d;
+    color: #333;
+}
+
+button:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* Love meter game */
+.love-meter {
+    width: 200px;
+    height: 30px;
+    border: 3px solid #ff6b6b;
+    border-radius: 15px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.meter-bar {
+    width: 0%;
+    height: 100%;
+    background: #ff3b6e;
+    transition: width 0.3s;
+}
+
+.heart {
+    font-size: 40px;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

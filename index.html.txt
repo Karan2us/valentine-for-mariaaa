@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? 🌸</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Animated floating hearts -->
+    <div class="hearts"></div>
+
+    <!-- Main card -->
+    <div class="valentine-card">
+        <div class="slide active">
+            <h1>Hi Marr! 🌸</h1>
+            <p>You make my heart do backflips!</p>
+            <button class="next-btn">Next ➔</button>
+        </div>
+
+        <div class="slide">
+            <h1>Will You Be My Valentine? 💌</h1>
+            <div class="buttons">
+                <button id="yes-btn">YES! 😍</button>
+                <button id="no-btn">NO 🙈</button>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h1>Love Meter 💘</h1>
+            <div class="love-meter">
+                <div class="meter-bar"></div>
+                <div class="heart" id="click-heart">❤️</div>
+            </div>
+            <p>Click the heart 10 times!</p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
